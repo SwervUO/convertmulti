@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		64E0061F292FA72C00BEBA8F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E0061E292FA72C00BEBA8F /* main.cpp */; };
+		64E00627292FA78A00BEBA8F /* argument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E00626292FA78A00BEBA8F /* argument.cpp */; };
+		64E0062F292FA7A100BEBA8F /* uop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E0062B292FA7A100BEBA8F /* uop.cpp */; };
+		64E00630292FA7A100BEBA8F /* multi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E0062C292FA7A100BEBA8F /* multi.cpp */; };
+		64E00631292FA7A100BEBA8F /* hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E0062E292FA7A100BEBA8F /* hash.cpp */; };
+		64E00634292FA7D900BEBA8F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E00633292FA7D100BEBA8F /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		64E0061B292FA72C00BEBA8F /* convertmulti */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = convertmulti; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E0061E292FA72C00BEBA8F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		64E00625292FA78A00BEBA8F /* argument.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = argument.hpp; sourceTree = "<group>"; };
+		64E00626292FA78A00BEBA8F /* argument.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = argument.cpp; sourceTree = "<group>"; };
+		64E00628292FA7A100BEBA8F /* multi.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = multi.hpp; sourceTree = "<group>"; };
+		64E00629292FA7A100BEBA8F /* hash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hash.hpp; sourceTree = "<group>"; };
+		64E0062A292FA7A100BEBA8F /* strutil.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = strutil.hpp; sourceTree = "<group>"; };
+		64E0062B292FA7A100BEBA8F /* uop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uop.cpp; sourceTree = "<group>"; };
+		64E0062C292FA7A100BEBA8F /* multi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multi.cpp; sourceTree = "<group>"; };
+		64E0062D292FA7A100BEBA8F /* uop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = uop.hpp; sourceTree = "<group>"; };
+		64E0062E292FA7A100BEBA8F /* hash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hash.cpp; sourceTree = "<group>"; };
+		64E00633292FA7D100BEBA8F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E00634292FA7D900BEBA8F /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +57,9 @@
 		64E00612292FA72C00BEBA8F = {
 			isa = PBXGroup;
 			children = (
-				64E0061D292FA72C00BEBA8F /* convertmulti */,
+				64E0061D292FA72C00BEBA8F /* source */,
 				64E0061C292FA72C00BEBA8F /* Products */,
+				64E00632292FA7D100BEBA8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +71,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		64E0061D292FA72C00BEBA8F /* convertmulti */ = {
+		64E0061D292FA72C00BEBA8F /* source */ = {
 			isa = PBXGroup;
 			children = (
+				64E0062E292FA7A100BEBA8F /* hash.cpp */,
+				64E00629292FA7A100BEBA8F /* hash.hpp */,
+				64E0062C292FA7A100BEBA8F /* multi.cpp */,
+				64E00628292FA7A100BEBA8F /* multi.hpp */,
+				64E0062A292FA7A100BEBA8F /* strutil.hpp */,
+				64E0062B292FA7A100BEBA8F /* uop.cpp */,
+				64E0062D292FA7A100BEBA8F /* uop.hpp */,
+				64E00626292FA78A00BEBA8F /* argument.cpp */,
+				64E00625292FA78A00BEBA8F /* argument.hpp */,
 				64E0061E292FA72C00BEBA8F /* main.cpp */,
 			);
-			path = convertmulti;
+			path = source;
+			sourceTree = "<group>";
+		};
+		64E00632292FA7D100BEBA8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64E00633292FA7D100BEBA8F /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +124,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1410;
+				ORGANIZATIONNAME = "Charles Kerr";
 				TargetAttributes = {
 					64E0061A292FA72C00BEBA8F = {
 						CreatedOnToolsVersion = 14.1;
@@ -119,6 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E0062F292FA7A100BEBA8F /* uop.cpp in Sources */,
+				64E00630292FA7A100BEBA8F /* multi.cpp in Sources */,
+				64E00627292FA78A00BEBA8F /* argument.cpp in Sources */,
+				64E00631292FA7A100BEBA8F /* hash.cpp in Sources */,
 				64E0061F292FA72C00BEBA8F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
