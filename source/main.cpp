@@ -110,7 +110,7 @@ int main(int argc, const char * argv[]) {
         }
         else {
             std::cout <<"Usage: (Note, filepaths are just examples)" <<std::endl;
-            std::cout <<"\tGeneral format is: multiconvert filepath filepath filepath\n\n";
+            std::cout <<"\tGeneral format is: convertmulti filepath filepath filepath\n\n";
             std::cout <<"Where:\n";
             
             std::cout <<"\tTo convert from MultiCollection.uop to multi.idx/mul:\n";
@@ -118,7 +118,7 @@ int main(int argc, const char * argv[]) {
             
             
             std::cout <<"\tTo convert from multi.idx/mul to MultiCollection.uop\n";
-            std::cout <<"\t\tconvertmulti multi.idx multi.mul MultiColleciton.uop\n\n";
+            std::cout <<"\t\tconvertmulti multi.idx multi.mul MultiCollection.uop\n\n";
             
             std::cout <<"Flags:\n\n";
             

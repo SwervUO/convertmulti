@@ -637,7 +637,7 @@ auto multistorage_t::save(const std::filesystem::path &datapath,const std::files
         auto length = std::uint32_t(0) ;
         auto extra = std::uint32_t(0) ;
         auto offset = std::uint32_t(0) ;
-        for (std::uint32_t id = 0 ; id < maxid;id++){
+        for (std::uint32_t id = 0 ; id < static_cast<std::uint32_t>(maxid);id++){
             auto iter = entry_location.find(id) ;
             if (iter != entry_location.end()){
                 auto multi = (*this)[id] ;
