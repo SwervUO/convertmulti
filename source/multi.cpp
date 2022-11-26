@@ -590,10 +590,10 @@ auto multistorage_t::saveMUL(const std::filesystem::path &csvdirectory, const st
         }
         else {
             length = 0 ;
-            offset = 0xFFFFFFFE;
+            offset = 0xFFFFFFFF;
             idx.write(reinterpret_cast<char*>(&offset),4);
             idx.write(reinterpret_cast<char*>(&length), 4);
-            idx.write(reinterpret_cast<char*>(&extra),4);
+            idx.write(reinterpret_cast<char*>(&offset),4);
         }
     }
 }
@@ -651,10 +651,10 @@ auto multistorage_t::save(const std::filesystem::path &datapath,const std::files
             }
             else {
                 length = 0 ;
-                offset = 0xFFFFFFFE;
+                offset = 0xFFFFFFFF;
                 idx.write(reinterpret_cast<char*>(&offset),4);
                 idx.write(reinterpret_cast<char*>(&length), 4);
-                idx.write(reinterpret_cast<char*>(&extra),4);
+                idx.write(reinterpret_cast<char*>(&offset),4);
             }
         }
      }
