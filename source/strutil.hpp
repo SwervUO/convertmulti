@@ -345,9 +345,15 @@ ston(const std::string &str_value, radix_t radix = radix_t::dec) {
             }
 
         } else {
-            std::from_chars(str_value.data(),
+            auto [ptr,ec] = std::from_chars(str_value.data(),
                             str_value.data() + str_value.size(), value,
                             static_cast<int>(radix));
+            if (ec == std::errc::invalid_argument) {
+                  throw std::runtime_error("Invalid argument for number conversion from string.");
+            }
+            else if (ec == std::errc::result_out_of_range) {
+                  throw std::runtime_error("Out of range for number conversion from string.");
+            }
             return value;
         }
     }
